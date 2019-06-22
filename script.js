@@ -1,4 +1,4 @@
-// VIDEO POPUP
+// VIDEO POPUPS
 const heroPlayBtn = document.querySelector(".hero-play-btn");
 const aboutPlayBtn = document.querySelector(".about-play-btn");
 const videoPopup1 = document.querySelector(".video-popup1");
@@ -20,20 +20,21 @@ close1.addEventListener("click", () => {
 
 aboutPlayBtn.addEventListener("click", () => {
 
-    videoPopup2.classList.toggle("show");
+    videoPopup1.classList.toggle("show");
 
 });
 
 close2.addEventListener("click", () => {
 
-    videoPopup2.classList.toggle("show");
+    videoPopup1.classList.toggle("show");
 
 });
 
-// BROCHURE AND SCROLL-TOP POPUP
+// BROCHURE, SCROLL-TOP AND NAV POPUP
 const introduction = document.getElementById("introduction");
 const brochure = document.querySelector(".brochure");
 const scrollTop = document.querySelector(".scroll-top");
+const nav = document.querySelector(".nav");
 
 document.addEventListener("scroll", () => {
 
@@ -42,12 +43,22 @@ document.addEventListener("scroll", () => {
 
         brochure.style.left = "-55px";
         scrollTop.style.bottom = "20px";
+        setTimeout(navTimeoutF, 500);
 
     } else if (introductionPosition.y > 100) {
 
         brochure.style.left = "-50vw";
         scrollTop.style.bottom = "-50vh";
+        setTimeout(navTimeoutA, 500);
 
     }
 
 });
+
+const navTimeoutF = () => {
+    nav.style.position = "fixed";
+};
+
+const navTimeoutA = () => {
+    nav.style.position = "absolute";
+};
