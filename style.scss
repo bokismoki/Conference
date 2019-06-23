@@ -5,8 +5,9 @@
 }
 
 .container {
-  width: 65%;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 10%;
 }
 
 html {
@@ -37,7 +38,7 @@ body {
     background-color: darken(#ce325f, 5%);
   }
 
-  .h6 {
+  h6 {
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 4px;
@@ -143,7 +144,6 @@ body {
   background-position: top;
   width: 100vw;
   height: 105vh;
-  overflow: hidden;
 }
 
 .nav {
@@ -170,6 +170,7 @@ body {
       height: 15px;
       cursor: pointer;
       transition: transform 500ms;
+      margin-left: 1em;
 
       &:hover {
         transform: scale(1.1);
@@ -312,7 +313,7 @@ body {
 
 .chevron-box {
   position: absolute;
-  bottom: -46px;
+  bottom: -5%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;
@@ -439,32 +440,36 @@ body {
 
     &-right {
       width: 55%;
-      display: grid;
-      grid-template-areas:
-        "int1 int3"
-        "int1 int3"
-        "int1 int4"
-        "int2 int4"
-        "int2 int4";
-      grid-gap: 1em;
 
-      div {
-        border: 10px solid #fff;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
+      .grid {
+        display: grid;
+        grid-template-areas:
+          "int1 int3"
+          "int1 int3"
+          "int1 int4"
+          "int2 int4"
+          "int2 int4";
+        grid-gap: 1em;
+        justify-items: center;
+        margin: 0 auto;
+        max-width: 600px;
+
+        div {
+          border: 10px solid #fff;
+          width: 100%;
+          background-size: cover;
+          background-position: center;
+        }
       }
 
       .introduction-1 {
         min-height: 300px;
-        max-width: 270px;
         grid-area: int1;
         background-image: url("img/introduction-1.jpg");
       }
 
       .introduction-2 {
         min-height: 200px;
-        max-width: 270px;
         grid-area: int2;
         background-image: url("img/introduction-2.jpg");
       }
@@ -542,7 +547,7 @@ body {
         display: block;
         margin-bottom: 1em;
         font-size: 1.25em;
-        width: 500px;
+        width: 80%;
         letter-spacing: 1px;
         font-family: "Muli", sans-serif;
         color: #707d8f;
@@ -634,6 +639,7 @@ body {
     .icons-item {
       display: flex;
       padding: 4em 4em 3.5em 0;
+      max-width: 33.33%;
 
       &:first-of-type {
         border-right: 1px solid #1f2344;
@@ -693,7 +699,7 @@ body {
         width: 200px;
         height: 80px;
         top: 0;
-        right: -11%;
+        right: -90px;
         transform: rotate(45deg);
         cursor: pointer;
       }
@@ -711,7 +717,7 @@ body {
         font-weight: bold;
         color: #fff;
         font-size: 3em;
-        right: 3%;
+        right: 20px;
         cursor: pointer;
       }
     }
@@ -1139,10 +1145,11 @@ body {
   .icon-list {
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    margin: 5em auto;
-    width: 56%;
+    grid-template-columns: repeat(3, 310px);
+    grid-template-rows: repeat(3, 250px);
+    margin: 5em 0;
+    padding: 0 10%;
+    justify-content: center;
 
     .item {
       max-width: 310px;
@@ -1302,7 +1309,7 @@ body {
       max-width: 320px;
       min-width: 320px;
       min-height: 480px;
-      margin: 0 auto;
+      margin: 0 1em;
 
       .top {
         background-image: url("img/tickets.jpg");
@@ -1436,7 +1443,7 @@ body {
 // GALLERY
 .gallery {
   background-color: #292d53;
-  padding: 5em 0 10em;
+  padding: 5em 5%;
 
   .h1 {
     color: #fff;
@@ -1449,7 +1456,7 @@ body {
     text-align: center;
 
     &::before {
-      content: "Tickets";
+      content: "Gallery";
       position: absolute;
       display: block;
       top: -50%;
@@ -1496,11 +1503,11 @@ body {
       "g6 g6 g7 g7 g8 g8";
     grid-gap: 1.5em;
     justify-content: center;
+    grid-template-columns: repeat(6, 16.66%);
+    grid-template-rows: repeat(4, 310px);
 
     .gallery1 {
       background-image: url("img/gallery-1.jpeg");
-      width: 690px;
-      height: 310px;
       background-position: center;
       background-size: cover;
       border: 10px solid #fff;
@@ -1510,8 +1517,6 @@ body {
 
     .gallery2 {
       background-image: url("img/gallery-2.jpeg");
-      width: 330px;
-      height: 310px;
       background-position: center;
       background-size: cover;
       border: 10px solid #fff;
@@ -1521,8 +1526,6 @@ body {
 
     .gallery3 {
       background-image: url("img/gallery-3.jpeg");
-      width: 510px;
-      height: 625px;
       background-position: center;
       background-size: cover;
       border: 10px solid #fff;
@@ -1532,8 +1535,6 @@ body {
 
     .gallery4 {
       background-image: url("img/gallery-4.jpeg");
-      width: 510px;
-      height: 302px;
       background-position: center;
       background-size: cover;
       border: 10px solid #fff;
@@ -1543,8 +1544,6 @@ body {
 
     .gallery5 {
       background-image: url("img/gallery-5.jpeg");
-      width: 510px;
-      height: 302px;
       background-position: center;
       background-size: cover;
       border: 10px solid #fff;
@@ -1554,8 +1553,6 @@ body {
 
     .gallery6 {
       background-image: url("img/gallery-6.jpeg");
-      width: 330px;
-      height: 290px;
       background-position: center;
       background-size: cover;
       border: 10px solid #fff;
@@ -1565,8 +1562,6 @@ body {
 
     .gallery7 {
       background-image: url("img/gallery-7.jpeg");
-      width: 330px;
-      height: 290px;
       background-position: center;
       background-size: cover;
       border: 10px solid #fff;
@@ -1576,8 +1571,6 @@ body {
 
     .gallery8 {
       background-image: url("img/gallery-8.jpeg");
-      width: 330px;
-      height: 290px;
       background-position: center;
       background-size: cover;
       border: 10px solid #fff;
@@ -1590,7 +1583,7 @@ body {
 // REGISTER
 .register {
   background-color: #2c305e;
-  height: 100vh;
+  height: 900px;
   display: flex;
 
   .left {
@@ -1602,7 +1595,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding-left: 20em;
+    padding-left: 20%;
 
     .h1 {
       color: #fff;
@@ -1610,9 +1603,10 @@ body {
       font-weight: 900;
       font-size: 3.75em;
       position: relative;
+      max-width: 250px;
       line-height: 1;
       margin: 3em 1em 1em 0;
-      width: 250px;
+      width: 80%;
       text-transform: uppercase;
       text-align: left;
 
@@ -1644,13 +1638,13 @@ body {
       color: #fff;
       font-family: "Muli", sans-serif;
       letter-spacing: 1px;
-      width: 500px;
+      width: 90%;
       text-align: left;
     }
   }
 
   .right {
-    padding: 10em;
+    padding: 10em 5%;
     width: 50vw;
 
     .form {
@@ -1783,7 +1777,7 @@ body {
   background-color: #25284a;
   color: #707d8f;
   text-transform: uppercase;
-  font-size: .7em;
+  font-size: 0.7em;
   letter-spacing: 3px;
   padding: 2.5em 0;
 
@@ -1795,7 +1789,8 @@ body {
       padding: 0 2em;
       position: relative;
 
-      &:first-of-type::after, &:nth-of-type(2)::after {
+      &:first-of-type::after,
+      &:nth-of-type(2)::after {
         position: absolute;
         content: "";
         background-color: #707d8f;
