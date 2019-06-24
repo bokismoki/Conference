@@ -14,13 +14,39 @@
 
 <body>
 
-    <div class="brochure">
+    <div class="brochure-btn">
         <h6>Brochure</h6>
     </div>
 
-    <div class="scroll-top">
-        <img src="img/chevron.png" class="chevron">
+    <div class="brochure-overlay">
+        <div class="brochure">
+            <div class="top">
+                <h1>Brochure</h1>
+                <p class="close3">Close X</p>
+            </div>
+            <div class="bottom">
+                <h3>Enter Your Info Below And We Will Send You The Brochure To Your Inbox!</h3>
+                <form class="form">
+                    <p>Name:</p>
+                    <input type="text" placeholder="Enter your name" class="name">
+                    <p>Email Address:</p>
+                    <input type="email" placeholder="Your email address" class="email">
+                    <input type="checkbox" checked class="checkbox">
+                    <a href="#">
+                        <p>Yes! I would like to subscribe to your amazing Business Newsletter</p>
+                    </a>
+                    <div class="clearfix"></div>
+                    <a href="#" class="send-brochure-btn">Send Me Brochure</a>
+                </form>
+            </div>
+        </div>
     </div>
+
+    <a href="#">
+        <div class="scroll-top-btn">
+            <img src="img/chevron.png" class="chevron">
+        </div>
+    </a>
 
     <div class="video-popup1">
         <iframe width="940" height="528" src="https://www.youtube.com/embed/FvOZsJVpYZg" frameborder="0"
@@ -35,8 +61,13 @@
         <div class="close2">X</div>
     </div>
 
+    <div class="gallery-img-overlay">
+        <img src="img/gallery-2.jpeg">
+        <div class="close4">X</div>
+    </div>
+
     <!-- HERO -->
-    <section class="hero" id="hero">
+    <section class="hero">
         <nav class="nav">
             <div class="nav-items">
                 <img src="img/logo.png" class="logo">
@@ -62,9 +93,11 @@
                     </div>
                 </div>
             </div>
-            <div class="chevron-box">
-                <img src="img/chevron.png" class="chevron">
-            </div>
+            <a href="#introduction">
+                <div class="chevron-box">
+                    <img src="img/chevron.png" class="chevron">
+                </div>
+            </a>
         </div>
     </section>
 
@@ -163,6 +196,17 @@
                 </div>
                 <div class="img2">
                 </div>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/twitter.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/chain.png">
+                    </div>
+                </div>
             </div>
             <div class="speaker-text">
                 <h1 class="h1">Heading</h1>
@@ -180,6 +224,17 @@
                 <div class="img1">
                 </div>
                 <div class="img2">
+                </div>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/twitter.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/chain.png">
+                    </div>
                 </div>
             </div>
             <div class="speaker-text">
@@ -199,6 +254,17 @@
                 </div>
                 <div class="img2">
                 </div>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/twitter.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/chain.png">
+                    </div>
+                </div>
             </div>
             <div class="speaker-text">
                 <h1 class="h1">Hanna Doe</h1>
@@ -216,6 +282,17 @@
                 <div class="img1">
                 </div>
                 <div class="img2">
+                </div>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/twitter.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/chain.png">
+                    </div>
                 </div>
             </div>
             <div class="speaker-text">
@@ -235,6 +312,17 @@
                 </div>
                 <div class="img2">
                 </div>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/twitter.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/chain.png">
+                    </div>
+                </div>
             </div>
             <div class="speaker-text">
                 <h1 class="h1">Seth Doe</h1>
@@ -252,6 +340,17 @@
                 <div class="img1">
                 </div>
                 <div class="img2">
+                </div>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="img/facebook.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/twitter.png">
+                    </div>
+                    <div class="icon">
+                        <img src="img/chain.png">
+                    </div>
                 </div>
             </div>
             <div class="speaker-text">
@@ -273,7 +372,7 @@
             <p class="p">Etiam tristique, metus pretium rutrum elementum, risus tortor euismod urna, porta felis felis
                 vel dui in bibendum justo vel pellentesque accumsan.</p>
             <div class="day-buttons">
-                <a href="#" class="day-btn day-btn1">Day 1</a><a href="#" class="day-btn day-btn2">Day 2</a><a href="#"
+                <a href="#/" class="day-btn day-btn1 active">Day 1</a><a href="#/" class="day-btn day-btn2">Day 2</a><a href="#/"
                     class="day-btn day-btn3">Day 3</a>
             </div>
             <ul class="schedules">
@@ -507,28 +606,28 @@
             <p class="p">Etiam tristique, metus pretium rutrum elementum, risus tortor euismod urna, porta felis felis
                 vel dui in bibendum justo vel pellentesque accumsan.</p>
             <div class="box">
-                <div class="gallery1">
+                <div class="gal gallery1">
 
                 </div>
-                <div class="gallery2">
+                <div class="gal gallery2">
 
                 </div>
-                <div class="gallery3">
+                <div class="gal gallery3">
 
                 </div>
-                <div class="gallery4">
+                <div class="gal gallery4">
 
                 </div>
-                <div class="gallery5">
+                <div class="gal gallery5">
 
                 </div>
-                <div class="gallery6">
+                <div class="gal gallery6">
 
                 </div>
-                <div class="gallery7">
+                <div class="gal gallery7">
 
                 </div>
-                <div class="gallery8">
+                <div class="gal gallery8">
 
                 </div>
             </div>
