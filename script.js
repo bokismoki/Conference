@@ -9,25 +9,25 @@ const close3 = document.querySelector(".close3");
 
 heroPlayBtn.addEventListener("click", () => {
 
-    videoPopup1.classList.toggle("show");
+    videoPopup1.classList.add("show");
 
 });
 
 close1.addEventListener("click", () => {
 
-    videoPopup1.classList.toggle("show");
+    videoPopup1.classList.remove("show");
 
 });
 
 aboutPlayBtn.addEventListener("click", () => {
 
-    videoPopup1.classList.toggle("show");
+    videoPopup1.classList.add("show");
 
 });
 
 close2.addEventListener("click", () => {
 
-    videoPopup1.classList.toggle("show");
+    videoPopup1.classList.remove("show");
 
 });
 
@@ -69,13 +69,21 @@ const brochureOverlay = document.querySelector(".brochure-overlay");
 
 brochureBtn.addEventListener("click", () => {
 
-    brochureOverlay.classList.toggle("show");
+    brochureOverlay.classList.add("show");
 
 });
 
 close3.addEventListener("click", () => {
 
-    brochureOverlay.classList.toggle("show");
+    brochureOverlay.classList.remove("show");
+
+});
+
+const downloadBrochureBtn = document.querySelector(".download-brochure-btn");
+
+downloadBrochureBtn.addEventListener("click", () => {
+
+    brochureOverlay.classList.add("show");
 
 });
 
@@ -152,7 +160,7 @@ gals.forEach(gal => {
         let bgImg = styles.backgroundImage;
         let bgHeight = styles.height;
         let bgWidth = styles.width;
-        galleryImgOverlay.classList.toggle("show");
+        galleryImgOverlay.classList.add("show");
         galleryImgOverlayImg.src = bgImg.slice(4, -1).replace(/"/g, "");
         galleryImgOverlayImg.style.width = bgWidth;
         galleryImgOverlayImg.style.height = bgHeight;
