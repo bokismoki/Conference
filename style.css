@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #2e3261;
 }
 
 body {
@@ -20,6 +21,9 @@ body {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .brochure-btn {
@@ -167,7 +171,6 @@ body {
 }
 
 .brochure-overlay .brochure .bottom .checkbox {
-  display: inline;
   width: auto;
   float: left;
   margin-right: 1em;
@@ -262,6 +265,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  max-width: 100%;
 }
 
 .video-popup1 .close1 {
@@ -299,6 +303,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  max-width: 100%;
 }
 
 .video-popup2 .close2 {
@@ -465,6 +470,72 @@ body {
   height: 100%;
 }
 
+.nav .hamburger {
+  display: none;
+}
+
+.toggledNav {
+  display: none;
+}
+
+.toggledNav a {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2.5em;
+  margin: 0 0.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  position: relative;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.toggledNav a::after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(174deg, #f9643d, #fe2a77);
+  height: 3px;
+  width: 0%;
+  bottom: 0;
+  opacity: 0;
+}
+
+.toggledNav a:hover::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: width 500ms;
+  transition: width 500ms;
+}
+
+.register-btn {
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-image: linear-gradient(174deg, #f9643d, #fe2a77);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3em;
+  margin: 0 1em 0 10em;
+  height: 100%;
+}
+
 .centered-content {
   position: absolute;
   left: 50%;
@@ -485,7 +556,7 @@ body {
           align-items: center;
 }
 
-.centered-content .h1 {
+.centered-content h1 {
   font-weight: 900;
   font-size: 7em;
   line-height: 1;
@@ -495,7 +566,7 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.centered-content .h1::after {
+.centered-content h1::after {
   position: absolute;
   content: "";
   background-color: #fff;
@@ -508,7 +579,7 @@ body {
           transform: translateX(-50%);
 }
 
-.centered-content .h2 {
+.centered-content h2 {
   font-weight: 300;
   font-family: serif;
   font-size: 1.7em;
@@ -542,12 +613,7 @@ body {
   width: 250px;
 }
 
-.centered-content .bordered-left .hero-play-btn {
-  cursor: pointer;
-  width: 25px;
-}
-
-.centered-content .bordered-left .h5 {
+.centered-content .bordered-left h5 {
   letter-spacing: 4px;
   margin: 0 1em;
 }
@@ -567,8 +633,13 @@ body {
   width: 250px;
 }
 
-.centered-content .bordered-right .h5 {
+.centered-content .bordered-right h5 {
   letter-spacing: 4px;
+}
+
+.centered-content .hero-play-btn {
+  cursor: pointer;
+  width: 25px;
 }
 
 .chevron-box {
@@ -625,7 +696,7 @@ body {
   color: #707d8f;
 }
 
-.introduction .h1 {
+.introduction h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
@@ -636,7 +707,7 @@ body {
   margin: 0 auto 1em;
 }
 
-.introduction .h1::before {
+.introduction h1::before {
   content: "Introduction";
   position: absolute;
   display: block;
@@ -651,7 +722,7 @@ body {
   letter-spacing: 5px;
 }
 
-.introduction .h1::after {
+.introduction h1::after {
   content: "";
   position: absolute;
   display: block;
@@ -701,21 +772,26 @@ body {
   padding: 0.5em 2em 0.5em 0;
 }
 
-.introduction .box-left .bp {
+.introduction .box-left .signature {
+  width: 250px;
+  margin-top: 1em;
+}
+
+.introduction .box .bp {
   font-size: 1.2em;
   letter-spacing: 1px;
   margin-bottom: 1em;
   line-height: 1.75;
 }
 
-.introduction .box-left .bp:first-of-type::first-letter {
+.introduction .box .bp:first-of-type::first-letter {
   color: #ce325f;
   font-size: 3em;
   float: left;
   margin-top: 13px;
 }
 
-.introduction .box-left .bp:nth-of-type(3) {
+.introduction .box .bp:nth-of-type(3) {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   border-left: 5px solid #ce325f;
@@ -723,16 +799,11 @@ body {
   font-size: 1.3em;
 }
 
-.introduction .box-left .signature {
-  width: 250px;
-  margin-top: 1em;
-}
-
 .introduction .box-right {
   width: 55%;
 }
 
-.introduction .box-right .grid {
+.introduction .box .grid {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "int1 int3" "int1 int3" "int1 int4" "int2 int4" "int2 int4";
@@ -742,14 +813,14 @@ body {
   max-width: 600px;
 }
 
-.introduction .box-right .grid div {
+.introduction .box .grid div {
   border: 10px solid #fff;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
 
-.introduction .box-right .introduction-1 {
+.introduction .box .introduction-1 {
   min-height: 300px;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
@@ -758,7 +829,7 @@ body {
   background-image: url("img/introduction-1.jpg");
 }
 
-.introduction .box-right .introduction-2 {
+.introduction .box .introduction-2 {
   min-height: 200px;
   -ms-grid-row: 4;
   -ms-grid-row-span: 2;
@@ -767,7 +838,7 @@ body {
   background-image: url("img/introduction-2.jpg");
 }
 
-.introduction .box-right .introduction-3 {
+.introduction .box .introduction-3 {
   min-height: 200px;
   max-width: 270px;
   -ms-grid-row: 1;
@@ -777,7 +848,7 @@ body {
   background-image: url("img/introduction-3.jpg");
 }
 
-.introduction .box-right .introduction-4 {
+.introduction .box .introduction-4 {
   min-height: 300px;
   max-width: 270px;
   -ms-grid-row: 3;
@@ -801,7 +872,7 @@ body {
           align-items: center;
 }
 
-.about-content .left {
+.about .left {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -812,7 +883,7 @@ body {
           flex-direction: column;
 }
 
-.about-content .left .h1 {
+.about .left h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
@@ -823,7 +894,7 @@ body {
   margin-bottom: 1em;
 }
 
-.about-content .left .h1::before {
+.about .left h1::before {
   content: "About";
   position: absolute;
   display: block;
@@ -838,7 +909,7 @@ body {
   letter-spacing: 5px;
 }
 
-.about-content .left .h1::after {
+.about .left h1::after {
   content: "";
   position: absolute;
   display: block;
@@ -852,7 +923,7 @@ body {
   border-radius: 5px;
 }
 
-.about-content .left .p {
+.about .left p {
   display: block;
   margin-bottom: 1em;
   font-size: 1.25em;
@@ -862,7 +933,7 @@ body {
   color: #707d8f;
 }
 
-.about-content .left .visit-venue-btn {
+.about .visit-venue-btn {
   color: #fff;
   background-color: #ce325f;
   -ms-flex-item-align: start;
@@ -879,15 +950,15 @@ body {
   transition: background-color 250ms;
 }
 
-.about-content .left .visit-venue-btn:hover {
+.about .visit-venue-btn:hover {
   background-color: #ba2c55;
 }
 
-.about-content .right {
+.about .right {
   width: 50%;
 }
 
-.about-content .right .about-img-box {
+.about .about-img-box {
   width: 500px;
   height: 300px;
   position: relative;
@@ -895,8 +966,8 @@ body {
   margin: 0 auto;
 }
 
-.about-content .right .about-img-box .bottom,
-.about-content .right .about-img-box .top {
+.about .about-img-box .bottom,
+.about .about-img-box .top {
   width: 500px;
   height: 300px;
   border-radius: 5px;
@@ -906,11 +977,11 @@ body {
   transition: opacity 750ms;
 }
 
-.about-content .right .about-img-box img.bottom:hover {
+.about .about-img-box img.bottom:hover {
   opacity: 0;
 }
 
-.about-content .right .about-play-btn {
+.about .about-play-btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -919,7 +990,7 @@ body {
   cursor: pointer;
 }
 
-.about-content .right .about-play-btn::before {
+.about .about-play-btn::before {
   content: "";
   background: -webkit-gradient(linear, left bottom, left top, from(#fd326f), to(#f9633e));
   background: linear-gradient(to top, #fd326f, #f9633e);
@@ -946,13 +1017,13 @@ body {
   height: 100%;
 }
 
-.icons .icons-list img {
+.icons .icon {
   width: auto;
   height: 50px;
   margin-right: 20px;
 }
 
-.icons .icons-list .icons-item {
+.icons .icons-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,22 +1032,22 @@ body {
   margin: 0 auto;
 }
 
-.icons .icons-list .icons-item:first-of-type {
+.icons .icons-item:first-of-type {
   border-right: 1px solid #1f2344;
 }
 
-.icons .icons-list .icons-item:nth-of-type(2) {
+.icons .icons-item:nth-of-type(2) {
   border-right: 1px solid #1f2344;
   border-left: 1px solid #2b305c;
   padding-left: 4em;
 }
 
-.icons .icons-list .icons-item:last-of-type {
+.icons .icons-item:last-of-type {
   border-left: 1px solid #2b305c;
   padding-left: 4em;
 }
 
-.icons .icons-list .icons-item .text {
+.icons .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -986,7 +1057,7 @@ body {
           flex-direction: column;
 }
 
-.icons .icons-list .icons-item .text .h4 {
+.icons .text h4 {
   color: #fff;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -994,7 +1065,7 @@ body {
   letter-spacing: 1px;
 }
 
-.icons .icons-list .icons-item .text .p {
+.icons .text p {
   color: #707d8f;
   font-family: "Muli", sans-serif;
   font-size: 1.1em;
@@ -1148,7 +1219,7 @@ body {
   padding: 9em 0 9em 6em;
 }
 
-.speakers .speaker-text .h1 {
+.speakers .speaker-text h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
@@ -1158,7 +1229,7 @@ body {
   margin: 0.5em 0;
 }
 
-.speakers .speaker-text .h1::before {
+.speakers .speaker-text h1::before {
   content: "Speaker";
   position: absolute;
   display: block;
@@ -1171,7 +1242,7 @@ body {
   letter-spacing: 5px;
 }
 
-.speakers .speaker-text .h1::after {
+.speakers .speaker-text h1::after {
   content: "";
   position: absolute;
   display: block;
@@ -1183,7 +1254,7 @@ body {
   border-radius: 5px;
 }
 
-.speakers .speaker-text .p:first-of-type {
+.speakers .speaker-text p:first-of-type {
   display: block;
   color: #707d8f;
   margin: 1em 0;
@@ -1193,7 +1264,7 @@ body {
   font-style: italic;
 }
 
-.speakers .speaker-text .p:last-of-type {
+.speakers .speaker-text p:last-of-type {
   display: block;
   color: #707d8f;
   font-family: "Muli", sans-serif;
@@ -1443,7 +1514,7 @@ body {
   justify-items: center;
 }
 
-.schedule .h1 {
+.schedule h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
@@ -1456,7 +1527,7 @@ body {
   grid-area: h1;
 }
 
-.schedule .h1::before {
+.schedule h1::before {
   content: "Schedule";
   position: absolute;
   display: block;
@@ -1471,7 +1542,7 @@ body {
   letter-spacing: 5px;
 }
 
-.schedule .h1::after {
+.schedule h1::after {
   content: "";
   position: absolute;
   display: block;
@@ -1516,7 +1587,7 @@ body {
   padding: 0 5%;
 }
 
-.schedule .day-buttons .day-btn {
+.schedule .day-btn {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -1535,7 +1606,7 @@ body {
   margin: 0 1em;
 }
 
-.schedule .day-buttons .day-btn.active {
+.schedule .day-btn.active {
   border-top: 3px solid #272b58;
   border-bottom: 3px solid #2c305e;
   border-left: 3px solid #272b58;
@@ -1554,7 +1625,7 @@ body {
   opacity: 0;
 }
 
-.schedule .schedules .sched {
+.schedule .sched {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1566,17 +1637,17 @@ body {
   text-align: left;
 }
 
-.schedule .schedules .sched .time {
+.schedule .time {
   min-width: 180px;
   font-size: 0.9em;
 }
 
-.schedule .schedules .sched .plan {
+.schedule .plan {
   font-family: "Muli", sans-serif;
   letter-spacing: 0.5px;
 }
 
-.schedule .schedules .sched .plan .todo {
+.schedule .todo {
   margin-bottom: 10px;
 }
 
@@ -1605,7 +1676,7 @@ body {
   padding: 5em 0;
 }
 
-.features .h1 {
+.features h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
@@ -1616,7 +1687,7 @@ body {
   text-align: center;
 }
 
-.features .h1::before {
+.features h1::before {
   content: "Features";
   position: absolute;
   display: block;
@@ -1631,7 +1702,7 @@ body {
   letter-spacing: 5px;
 }
 
-.features .h1::after {
+.features h1::after {
   content: "";
   position: absolute;
   display: block;
@@ -1645,7 +1716,7 @@ body {
   border-radius: 5px;
 }
 
-.features .p {
+.features p {
   color: #707d8f;
   font-family: "Muli", sans-serif;
   letter-spacing: 1px;
@@ -1670,7 +1741,7 @@ body {
           justify-content: center;
 }
 
-.features .icon-list .item {
+.features .item {
   max-width: 310px;
   max-height: 250px;
   display: -webkit-box;
@@ -1680,58 +1751,58 @@ body {
   padding: 3em 2em;
 }
 
-.features .icon-list .item:first-of-type {
+.features .item:first-of-type {
   border-bottom: 1px solid #242753;
   border-right: 1px solid #242753;
 }
 
-.features .icon-list .item:nth-of-type(2) {
+.features .item:nth-of-type(2) {
   border-left: 1px solid #2f3470;
   border-bottom: 1px solid #242753;
   border-right: 1px solid #242753;
 }
 
-.features .icon-list .item:nth-of-type(3) {
+.features .item:nth-of-type(3) {
   border-left: 1px solid #2f3470;
   border-bottom: 1px solid #242753;
 }
 
-.features .icon-list .item:nth-of-type(4) {
+.features .item:nth-of-type(4) {
   border-top: 1px solid #2f3470;
   border-bottom: 1px solid #242753;
   border-right: 1px solid #242753;
 }
 
-.features .icon-list .item:nth-of-type(5) {
+.features .item:nth-of-type(5) {
   border-top: 1px solid #2f3470;
   border-left: 1px solid #2f3470;
   border-bottom: 1px solid #242753;
   border-right: 1px solid #242753;
 }
 
-.features .icon-list .item:nth-of-type(6) {
+.features .item:nth-of-type(6) {
   border-top: 1px solid #2f3470;
   border-left: 1px solid #2f3470;
   border-bottom: 1px solid #242753;
 }
 
-.features .icon-list .item:nth-of-type(7) {
+.features .item:nth-of-type(7) {
   border-top: 1px solid #2f3470;
   border-right: 1px solid #242753;
 }
 
-.features .icon-list .item:nth-of-type(8) {
+.features .item:nth-of-type(8) {
   border-top: 1px solid #2f3470;
   border-left: 1px solid #2f3470;
   border-right: 1px solid #242753;
 }
 
-.features .icon-list .item:nth-of-type(9) {
+.features .item:nth-of-type(9) {
   border-top: 1px solid #2f3470;
   border-left: 1px solid #2f3470;
 }
 
-.features .icon-list .item .icon {
+.features .item .icon {
   max-width: 50px;
   min-width: 50px;
   -ms-flex-item-align: start;
@@ -1740,7 +1811,7 @@ body {
   margin-top: 5px;
 }
 
-.features .icon-list .item .text {
+.features .item .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1750,7 +1821,7 @@ body {
           flex-direction: column;
 }
 
-.features .icon-list .item .text .h3 {
+.features .item .text h3 {
   color: #fff;
   text-transform: uppercase;
   font-weight: 100;
@@ -1759,7 +1830,7 @@ body {
   margin-bottom: 10px;
 }
 
-.features .icon-list .item .text .p {
+.features .item .text p {
   font-family: "Muli", sans-serif;
   color: #707d8f;
   letter-spacing: 0.5px;
@@ -1835,7 +1906,7 @@ body {
           justify-content: center;
 }
 
-.tickets .cards .card {
+.tickets .card {
   background-color: #fff;
   border-radius: 5px;
   max-width: 320px;
@@ -1844,7 +1915,7 @@ body {
   margin: 0 1em;
 }
 
-.tickets .cards .card .top {
+.tickets .card .top {
   background-image: url("img/tickets.jpg");
   background-position: center;
   background-size: cover;
@@ -1855,7 +1926,7 @@ body {
   position: relative;
 }
 
-.tickets .cards .card .top .price {
+.tickets .card .price {
   color: #fff;
   font-size: 5em;
   position: absolute;
@@ -1866,7 +1937,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.tickets .cards .card .top .price::before {
+.tickets .card .price::before {
   content: "$";
   position: absolute;
   font-weight: 100;
@@ -1875,46 +1946,31 @@ body {
   left: -25%;
 }
 
-.tickets .cards .card .top .price1::after {
+.tickets .card .price::after {
+  position: absolute;
+  font-style: italic;
+  font-size: 0.25em;
+  font-weight: 100;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.tickets .card .price .price1::after {
   content: "Bronze";
-  position: absolute;
-  font-size: 0.25em;
-  font-style: italic;
-  font-weight: 100;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  top: 90%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
-.tickets .cards .card .top .price2::after {
+.tickets .card .price .price2::after {
   content: "Gold";
-  position: absolute;
-  font-size: 0.25em;
-  font-style: italic;
-  font-weight: 100;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  top: 90%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
-.tickets .cards .card .top .price3::after {
+.tickets .card .price .price3::after {
   content: "Diamond";
-  position: absolute;
-  font-size: 0.25em;
-  font-style: italic;
-  font-weight: 100;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  top: 90%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
-.tickets .cards .card .bottom {
+.tickets .card .bottom {
   height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1929,7 +1985,7 @@ body {
   text-align: left;
 }
 
-.tickets .cards .card .bottom .row {
+.tickets .card .bottom .row {
   height: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1937,7 +1993,7 @@ body {
   border-bottom: 1px dotted #d5dae0;
 }
 
-.tickets .cards .card .bottom p {
+.tickets .card .bottom p {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1948,9 +2004,12 @@ body {
   position: relative;
 }
 
-.tickets .cards .card .bottom p::before {
+.tickets .card .bottom p::before {
   position: absolute;
-  content: url("img/checkmark.png");
+  content: "";
+  background-image: url("img/checkmark.png");
+  background-size: cover;
+  background-position: center;
   top: 25%;
   left: 3%;
   -webkit-transform: translateY(-50%);
@@ -1958,18 +2017,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 20px;
+  width: 15px;
+  height: 15px;
 }
 
-.tickets .cards .card .bottom p.ix::before {
+.tickets .card .bottom p.ix::before {
   position: absolute;
-  content: url("img/closemark.png");
+  content: "";
+  background-image: url("img/closemark.png");
+  background-size: cover;
+  background-position: center;
   top: 25%;
   left: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 20px;
+  width: 15px;
 }
 
 .tickets .register-today-btn {
@@ -1996,7 +2059,7 @@ body {
   padding: 5em 5%;
 }
 
-.gallery .h1 {
+.gallery h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
@@ -2007,7 +2070,7 @@ body {
   text-align: center;
 }
 
-.gallery .h1::before {
+.gallery h1::before {
   content: "Gallery";
   position: absolute;
   display: block;
@@ -2022,7 +2085,7 @@ body {
   letter-spacing: 5px;
 }
 
-.gallery .h1::after {
+.gallery h1::after {
   content: "";
   position: absolute;
   display: block;
@@ -2036,7 +2099,7 @@ body {
   border-radius: 5px;
 }
 
-.gallery .p {
+.gallery p {
   color: #707d8f;
   font-family: "Muli", sans-serif;
   letter-spacing: 1px;
@@ -2061,101 +2124,76 @@ body {
       grid-template-rows: repeat(4, 310px);
 }
 
-.gallery .box .gallery1 {
-  background-image: url("img/gallery-1.jpeg");
+.gallery .box .gal {
   background-position: center;
   background-size: cover;
   border: 10px solid #fff;
+  cursor: pointer;
+}
+
+.gallery .box .gallery1 {
+  background-image: url("img/gallery-1.jpeg");
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: g1;
-  cursor: pointer;
 }
 
 .gallery .box .gallery2 {
   background-image: url("img/gallery-2.jpeg");
-  background-position: center;
-  background-size: cover;
-  border: 10px solid #fff;
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
   grid-area: g2;
-  cursor: pointer;
 }
 
 .gallery .box .gallery3 {
   background-image: url("img/gallery-3.jpeg");
-  background-position: center;
-  background-size: cover;
-  border: 10px solid #fff;
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: g3;
-  cursor: pointer;
 }
 
 .gallery .box .gallery4 {
   background-image: url("img/gallery-4.jpeg");
-  background-position: center;
-  background-size: cover;
-  border: 10px solid #fff;
   -ms-grid-row: 2;
   -ms-grid-column: 4;
   -ms-grid-column-span: 3;
   grid-area: g4;
-  cursor: pointer;
 }
 
 .gallery .box .gallery5 {
   background-image: url("img/gallery-5.jpeg");
-  background-position: center;
-  background-size: cover;
-  border: 10px solid #fff;
   -ms-grid-row: 3;
   -ms-grid-column: 4;
   -ms-grid-column-span: 3;
   grid-area: g5;
-  cursor: pointer;
 }
 
 .gallery .box .gallery6 {
   background-image: url("img/gallery-6.jpeg");
-  background-position: center;
-  background-size: cover;
-  border: 10px solid #fff;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: g6;
-  cursor: pointer;
 }
 
 .gallery .box .gallery7 {
   background-image: url("img/gallery-7.jpeg");
-  background-position: center;
-  background-size: cover;
-  border: 10px solid #fff;
   -ms-grid-row: 4;
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: g7;
-  cursor: pointer;
 }
 
 .gallery .box .gallery8 {
   background-image: url("img/gallery-8.jpeg");
-  background-position: center;
-  background-size: cover;
-  border: 10px solid #fff;
   -ms-grid-row: 4;
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
   grid-area: g8;
-  cursor: pointer;
 }
 
 .register {
@@ -2183,7 +2221,7 @@ body {
   padding-left: 20%;
 }
 
-.register .left .h1 {
+.register .left h1 {
   color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
@@ -2197,7 +2235,7 @@ body {
   text-align: left;
 }
 
-.register .left .h1::before {
+.register .left h1::before {
   content: "Register";
   position: absolute;
   display: block;
@@ -2209,7 +2247,7 @@ body {
   letter-spacing: 5px;
 }
 
-.register .left .h1::after {
+.register .left h1::after {
   content: "";
   position: absolute;
   display: block;
@@ -2220,7 +2258,7 @@ body {
   border-radius: 5px;
 }
 
-.register .left .p {
+.register .left p {
   color: #fff;
   font-family: "Muli", sans-serif;
   letter-spacing: 1px;
@@ -2233,7 +2271,7 @@ body {
   width: 50vw;
 }
 
-.register .right .form {
+.register .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2250,7 +2288,7 @@ body {
           justify-content: space-between;
 }
 
-.register .right .form .p {
+.register .form p {
   text-transform: uppercase;
   font-size: 0.8em;
   color: #707d8f;
@@ -2258,13 +2296,13 @@ body {
   letter-spacing: 3px;
 }
 
-.register .right .form .title {
+.register .form .title {
   width: 100%;
   padding: 0.8em;
   color: #aeaeae;
 }
 
-.register .right .form .name {
+.register .form .name {
   padding: 0.8em;
   border: none;
   border-bottom: 1px solid #707d8f;
@@ -2274,11 +2312,11 @@ body {
   font-size: 1.1em;
 }
 
-.register .right .form .name:hover {
+.register .form .name:hover {
   border-bottom-color: #ce325f;
 }
 
-.register .right .form .email {
+.register .form .email {
   padding: 0.8em;
   border: none;
   border-bottom: 1px solid #707d8f;
@@ -2288,11 +2326,11 @@ body {
   font-size: 1.1em;
 }
 
-.register .right .form .email:hover {
+.register .form .email:hover {
   border-bottom-color: #ce325f;
 }
 
-.register .right .form .address {
+.register .form .address {
   padding: 0.8em;
   border: none;
   border-bottom: 1px solid #707d8f;
@@ -2302,17 +2340,17 @@ body {
   font-size: 1.1em;
 }
 
-.register .right .form .address:hover {
+.register .form .address:hover {
   border-bottom-color: #ce325f;
 }
 
-.register .right .form .ticket {
+.register .form .ticket {
   width: 100%;
   padding: 0.8em;
   color: #aeaeae;
 }
 
-.register .right .form .submit-btn {
+.register .form .submit-btn {
   color: #fff;
   background-color: #ce325f;
   text-decoration: none;
@@ -2329,7 +2367,7 @@ body {
   text-align: center;
 }
 
-.register .right .form .submit-btn:hover {
+.register .form .submit-btn:hover {
   background-color: #ba2c55;
 }
 
@@ -2357,7 +2395,7 @@ body {
   top: -80%;
 }
 
-.sponsors-logo img {
+.sponsors .logo {
   width: 150px;
   cursor: pointer;
   -webkit-transition: -webkit-transform 500ms;
@@ -2369,7 +2407,7 @@ body {
       align-self: center;
 }
 
-.sponsors-logo img:hover {
+.sponsors .logo:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }

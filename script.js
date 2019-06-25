@@ -5,30 +5,29 @@ const videoPopup1 = document.querySelector(".video-popup1");
 const videoPopup2 = document.querySelector(".video-popup2");
 const close1 = document.querySelector(".close1");
 const close2 = document.querySelector(".close2");
-const close3 = document.querySelector(".close3");
 
 heroPlayBtn.addEventListener("click", () => {
-
+    
     videoPopup1.classList.add("show");
-
+    
 });
 
 close1.addEventListener("click", () => {
-
+    
     videoPopup1.classList.remove("show");
-
+    
 });
 
 aboutPlayBtn.addEventListener("click", () => {
-
+    
     videoPopup1.classList.add("show");
-
+    
 });
 
 close2.addEventListener("click", () => {
-
+    
     videoPopup1.classList.remove("show");
-
+    
 });
 
 // BROCHURE-BTN, SCROLL-TOP AND NAV
@@ -38,22 +37,22 @@ const scrollTopBtn = document.querySelector(".scroll-top-btn");
 const nav = document.querySelector(".nav");
 
 document.addEventListener("scroll", () => {
-
+    
     let introductionPosition = introduction.getBoundingClientRect();
     if (introductionPosition.y <= 0) {
-
+        
         brochureBtn.style.left = "-55px";
         scrollTopBtn.style.bottom = "20px";
         setTimeout(navTimeoutF, 500);
-
+        
     } else if (introductionPosition.y > 100) {
-
+        
         brochureBtn.style.left = "-50vw";
         scrollTopBtn.style.bottom = "-50vh";
         setTimeout(navTimeoutA, 500);
-
+        
     }
-
+    
 });
 
 const navTimeoutF = () => {
@@ -66,15 +65,16 @@ const navTimeoutA = () => {
 
 // BROCHURE POPUP
 const brochureOverlay = document.querySelector(".brochure-overlay");
+const close3 = document.querySelector(".close3");
 
 brochureBtn.addEventListener("click", () => {
-
+    
     brochureOverlay.classList.add("show");
-
+    
 });
 
 close3.addEventListener("click", () => {
-
+    
     brochureOverlay.classList.remove("show");
 
 });
