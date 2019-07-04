@@ -174,3 +174,13 @@ close4.addEventListener("click", () => {
     galleryImgOverlay.classList.remove("show");
 
 });
+
+// TOGGLE HAMBURGER MENU
+const hamburger = document.querySelector(".hamburger");
+const toggledNav = document.querySelector(".toggled-nav")
+
+hamburger.addEventListener("click", () => {
+
+    toggledNav.classList.toggle("show");
+
+});
